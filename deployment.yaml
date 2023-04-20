@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: helloworld-k8s
-          image: smondepulanka/helloworld:abc1.0 # Image that will be used to containers in the cluster
+          image: smondepulanka/helloworld:1.0 # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
@@ -28,6 +28,6 @@ spec:
     app: helloworld-k8s
   ports:
     - protocol: "TCP"
-      port: 8080 # The port that the service is running on in the cluster
+      port: 80 # The port that the service is running on in the cluster
       targetPort: 8080 # The port exposed by the service
   type: LoadBalancer
